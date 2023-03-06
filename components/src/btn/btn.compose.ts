@@ -5,7 +5,7 @@ import { provideFASTDesignSystem } from "@microsoft/fast-components";
 
 const { wrap } = provideReactWrapper(React, provideFASTDesignSystem());
 
-export const counter = Counter.compose({
+export const CounterComp = Counter.compose({
   baseName: "counter-btn",
   styles: counterStyles,
   counterTemplate,
@@ -14,4 +14,4 @@ export const counter = Counter.compose({
 
 export { counterStyles };
 
-export const CounterBtn = wrap(counter());
+export const CounterBtn = wrap(CounterComp());

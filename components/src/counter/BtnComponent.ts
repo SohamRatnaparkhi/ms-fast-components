@@ -1,4 +1,4 @@
-import { html, css, customElement } from "@microsoft/fast-element";
+import { html, css } from "@microsoft/fast-element";
 import type {
   ElementDefinitionContext,
   FoundationElementDefinition,
@@ -7,10 +7,6 @@ import type {
 import { FoundationElement } from "@microsoft/fast-foundation";
 import { attr } from "@microsoft/fast-element";
 
-@customElement({
-  name: "my-button2",
-  // template: html` <div></div>`,
-})
 export class Counter extends FoundationElement {
   @attr count = 0;
 
@@ -30,7 +26,7 @@ export const counterTemplate = (
   const buttonTag = "div";
 
   return html`
-        <div>The count is ${(x) => x.count}.</div>
+        <div>The count is ${(x: any) => x.count}.</div>
         <${buttonTag} @click=${(x) => x.increment()}>
             <slot>${
               definition.defaultButtonContent

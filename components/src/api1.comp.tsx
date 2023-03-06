@@ -1,4 +1,4 @@
-import { customElement, html, css } from "@microsoft/fast-element";
+import { customElement, html } from "@microsoft/fast-element";
 import { provideReactWrapper } from "@microsoft/fast-react-wrapper";
 import React from "react";
 
@@ -12,7 +12,7 @@ const myStyles = {
   name: "btn-1",
   template: html` <div class=""></div>`,
 })
-class _MyButton extends HTMLElement {
+class _ApiComp1 extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -44,5 +44,4 @@ class _MyButton extends HTMLElement {
     );
   }
 }
-const MyButton = provideReactWrapper(React).wrap(_MyButton);
-export { MyButton };
+export const ApiComp1 = provideReactWrapper(React).wrap(_ApiComp1);
