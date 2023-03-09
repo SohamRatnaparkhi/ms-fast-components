@@ -82,7 +82,7 @@ const styles = css`
   template,
   styles,
 })
-class _MyButton3 extends FASTElement {
+class _Banner extends FASTElement {
   @attr greeting: string = "Hello";
   data = [];
   constructor() {
@@ -111,5 +111,5 @@ class _MyButton3 extends FASTElement {
     </div>;
   }
 }
-const MyButton3 = provideReactWrapper(React).wrap(_MyButton3);
-export default MyButton3;
+const Banner = provideReactWrapper(React).wrap(_Banner);
+export default Banner;

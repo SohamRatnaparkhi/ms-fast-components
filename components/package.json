@@ -7,7 +7,7 @@
     "@microsoft/fast-react-wrapper": "^0.3.16-0"
   },
   "name": "my-fast-comps",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "devDependencies": {
     "@babel/cli": "^7.21.0",

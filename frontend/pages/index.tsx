@@ -1,90 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-// import ApiComp4 from "my-fast-comps";
-// import { CounterBtn } from "../components/btn/btn.compose";
-// import MyButton from "../components/MyButton";
-// import MyButton3 from "../components/MyButton3";
-// import MyButton4 from "../components/MyButton4";
-
-// const CounterBtn = dynamic(
-//   () =>
-//     import("../components/counter/btn.compose").then(
-//       (module) => module.CounterBtn
-//     ),
-//   {
-//     ssr: false,
-//   }
-// ); //! should display the counter button
-
-// const MyButton = dynamic(
-//   () => import("../components/MyButton").then((btn) => btn.MyButton),
-//   {
-//     ssr: false,
-//   }
-// ); //! should display John Doe or the response from api/hello
-
-// const MyButton2 = dynamic(() => import("../components/MyButton2"), {
-//   ssr: false,
-// }); //! should display api/getNames response
-
-// const MyButton3 = dynamic(() => import("../components/MyButton3"), {
-//   ssr: false,
-// });
-
-// const MyButton4 = dynamic(() => import("../components/MyButton4"), {
-//   ssr: false,
-// }); //! Similar response to MyButton2
-
-const CounterBtn = dynamic(
-  () =>
-    import("../components/counter/btn.compose").then(
-      (module) => module.CounterBtn
-    ),
-  {
-    ssr: false,
-  }
-);
-
-const ApiComp1 = dynamic(
-  () => import("my-fast-comps/api1.comp").then((module) => module.ApiComp1),
-  {
-    ssr: false,
-  }
-);
-
-const ApiComp2 = dynamic(() => import("my-fast-comps/api2.component"), {
-  ssr: false,
-});
-
-const ApiComp3 = dynamic(
-  () => import("my-fast-comps").then((module) => module.ApiComp3),
-  {
-    ssr: false,
-  }
-);
-
-// const ApiComp4 = dynamic(
-//   () => import("my-fast-comps"),
-//   {
-//     ssr: false,
-//   }
-// );
-
-const Banner = dynamic(() => import("my-fast-comps/banner.component"), {
-  ssr: false,
-});
-
-const ApiComp4 = dynamic(() => import("my-fast-comps/api4.component"), {
-  ssr: false,
-});
-
-// import CounterBtn from "my-fast-comps/btn.compose";
-
-const MyButton5 = dynamic(() => import("../components/MyButton5"), {
-  ssr: false,
-}); //! Similar response to MyButton2
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -108,15 +25,9 @@ const Home: NextPage = () => {
             pages/index.tsx
           </code>
         </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <CounterBtn />
-          <ApiComp1 />
-          <ApiComp2 />
-          <ApiComp3 />
-          <ApiComp4 />
-          <Banner />
-        </div>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <Link href={"/styleHardcoded"}>Style hardcoded tokens</Link>
+        </button>
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
