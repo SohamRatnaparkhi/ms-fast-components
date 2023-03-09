@@ -22,7 +22,7 @@ class _ApiComp1 extends HTMLElement {
   }
 
   async connectedCallback() {
-    const response = await fetch("/api/hello");
+    const response = await fetch("http://localhost:3000/api/hello");
     const data = await response.json();
     const div = this.shadowRoot!.querySelector("div");
     const btn2 = this.getElementsByClassName("btn-2")[0];

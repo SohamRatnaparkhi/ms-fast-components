@@ -8,7 +8,7 @@ export class MyApiData extends FASTElement {
 
   async connectedCallback() {
     super.connectedCallback();
-    const response = await fetch("api/getNames");
+    const response = await fetch("http://localhost:3000/api/getNames");
     const { name } = await response.json();
     this.data = name;
     console.log(this.data);

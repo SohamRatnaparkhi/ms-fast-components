@@ -58,9 +58,12 @@ const ApiComp2 = dynamic(() => import("my-fast-comps/api2.component"), {
   ssr: false,
 });
 
-const ApiComp3 = dynamic(() => import("my-fast-comps/api3.component"), {
-  ssr: false,
-});
+const ApiComp3 = dynamic(
+  () => import("my-fast-comps").then((module) => module.ApiComp3),
+  {
+    ssr: false,
+  }
+);
 
 // const ApiComp4 = dynamic(
 //   () => import("my-fast-comps"),
