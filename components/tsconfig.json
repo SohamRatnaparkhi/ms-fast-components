@@ -5,7 +5,7 @@
     "jsx": "react",
     "declaration": true,
     "esModuleInterop": true,
-    "outDir": "dist/src",
+    "outDir": "dist",
     "target": "es6",
     "module": "es6",
     "moduleResolution": "node",

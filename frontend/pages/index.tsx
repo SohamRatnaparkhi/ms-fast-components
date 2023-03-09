@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+// import ApiComp4 from "my-fast-comps";
 // import { CounterBtn } from "../components/btn/btn.compose";
 // import MyButton from "../components/MyButton";
 // import MyButton3 from "../components/MyButton3";
@@ -48,44 +48,36 @@ const CounterBtn = dynamic(
 );
 
 const ApiComp1 = dynamic(
-  () =>
-    import("../node_modules/my-fast-comps/api1.comp").then(
-      (module) => module.ApiComp1
-    ),
+  () => import("my-fast-comps/api1.comp").then((module) => module.ApiComp1),
   {
     ssr: false,
   }
 );
 
-const ApiComp2 = dynamic(
-  () => import("../node_modules/my-fast-comps/api2.component"),
-  {
-    ssr: false,
-  }
-);
+const ApiComp2 = dynamic(() => import("my-fast-comps/api2.component"), {
+  ssr: false,
+});
 
-const ApiComp3 = dynamic(
-  () => import("../node_modules/my-fast-comps/api3.component"),
-  {
-    ssr: false,
-  }
-);
+const ApiComp3 = dynamic(() => import("my-fast-comps/api3.component"), {
+  ssr: false,
+});
 
-const ApiComp4 = dynamic(
-  () => import("../node_modules/my-fast-comps/api4.component"),
-  {
-    ssr: false,
-  }
-);
+// const ApiComp4 = dynamic(
+//   () => import("my-fast-comps"),
+//   {
+//     ssr: false,
+//   }
+// );
 
-const Banner = dynamic(
-  () => import("../node_modules/my-fast-comps/banner.component"),
-  {
-    ssr: false,
-  }
-);
+const Banner = dynamic(() => import("my-fast-comps/banner.component"), {
+  ssr: false,
+});
 
-// import CounterBtn from "../node_modules/my-fast-comps/src/btn/btn.compose";
+const ApiComp4 = dynamic(() => import("my-fast-comps/api4.component"), {
+  ssr: false,
+});
+
+// import CounterBtn from "my-fast-comps/btn.compose";
 
 const MyButton5 = dynamic(() => import("../components/MyButton5"), {
   ssr: false,

@@ -12,7 +12,7 @@ export const CounterComp = Counter.compose({
   defaultButtonContent: "Count!",
 });
 
-export { counterStyles };
+export { counterStyles, Counter };
 
 const CounterBtn = wrap(CounterComp());
 export default CounterBtn;
