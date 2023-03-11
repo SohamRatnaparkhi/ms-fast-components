@@ -11,4 +11,6 @@ export {
   ApiComp4,
   CounterBtn,
   Counter,
+  Banner,
+  CustomBtn1React,
 } from "./src";

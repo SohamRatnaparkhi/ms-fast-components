@@ -19,7 +19,7 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist index.js",
     "build": "npm run clean && tsc && cp package.json README.md ./dist"
   },
   "author": "sohamr",
