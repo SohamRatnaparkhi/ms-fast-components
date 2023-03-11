@@ -28,6 +28,9 @@ const Home: NextPage = () => {
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           <Link href={"/styleHardcoded"}>Style hardcoded tokens</Link>
         </button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">
+          <Link href={"/designTokens"}>Design tokens</Link>
+        </button>
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
