@@ -8,10 +8,18 @@ const CustomBtn1 = dynamic(
   }
 );
 
+const CustomBtn1React = dynamic(
+  () => import("my-fast-comps").then((mod) => mod.CustomBtn1React),
+  {
+    ssr: false,
+  }
+);
+
 const designTokens = () => {
   return (
     <div>
-      <CustomBtn1 />
+      {/* <CustomBtn1 /> */}
+      <CustomBtn1React />
     </div>
   );
 };
