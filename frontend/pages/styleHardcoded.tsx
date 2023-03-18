@@ -53,7 +53,7 @@ const HardCodedTokens = () => {
         <ApiComp2 />
         <ApiComp3 />
         <ApiComp4 />
-        <Banner greeting="Soham" />
+        <Banner greeting={"Soham"} />
       </div>
     </div>
   );
