@@ -5,6 +5,7 @@ import ApiComp3 from "./api3.component";
 import ApiComp4 from "./api4.component";
 import Banner from "./banner.component";
 import CustomBtn1React from "./designTokens/btn1.component";
+import { ReactGetTask } from "./ga4gh/tes/GetTasks";
 
 export {
   ApiComp1,
@@ -15,4 +16,5 @@ export {
   Counter,
   Banner,
   CustomBtn1React,
+  ReactGetTask,
 };
