@@ -99,7 +99,10 @@ export class GetTasks extends FASTElement {
     console.log(newValue);
   }
 
-  designTokensChanged(_oldValue: object[], tokenFromParams: object) {
+  designTokensChanged(
+    _oldValue: designTokensTypes,
+    tokenFromParams: designTokensTypes
+  ) {
     const currentComponent = this.$fastController.element;
     const tokenArray = Object.entries(tokenFromParams);
     tokenArray.map((token) => {
@@ -140,3 +143,49 @@ export class GetTasks extends FASTElement {
 }
 
 export const ReactGetTask = provideReactWrapper(React).wrap(GetTasks);
+
+// type viewTypeTypes = "minimal" | "full" | "basic";
+
+// const template = html`
+//   <div class="header"></div>
+//   <div class="body">
+//     <slot></slot>
+//     {
+//       ${when(
+//         (x) => !x.ready,
+//         //loading template
+//       )}
+//       ${when(
+//         (x) => x.ready && x.viewType == "minimal",
+//         //minimal view template
+//       )}
+//       ${when(
+//         (x) => x.ready && x.viewType == "full",
+//         //full view template
+//       )}
+//       ${when(
+//         (x) => x.ready && x.viewType == "basic",
+//         //basic view template
+//       )}
+//     }
+//     </div>
+//   <div class="footer"></div>
+// `;
+// export class GetTasksTES extends FASTElement {
+//   constructor() {
+//     super();
+//   }
+//   @attr viewType: viewTypeTypes = "minimal"; //default value
+//   @attr designTokens: designTokensTypes = {};
+//   @observable ready: boolean = false;
+//   @observable data: any = [];
+
+//   async viewTypeChanged(_oldValue: viewTypeTypes, newValue: viewTypeTypes) {
+//     const {data, status} = await TES_AXIOS_INSTANCE.get(`/tasks?view=${newValue}`);
+//     this.data = data.tasks;
+//     this.ready = true;
+//   }
+//   designTokenChanged(_oldValue: object[], tokenFromParams: object) {
+//     ...
+//   }
+// }
